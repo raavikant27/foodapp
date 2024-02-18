@@ -1,24 +1,29 @@
-import React from "react";
+import FoodFireLogo from "../Images/Food Fire Logo.png";
 
-function Header() {
+// Title component for display logo
+const Title = () => (
+  <a href="/">
+    <img className="logo" src={FoodFireLogo} alt="Food Fire Logo" />
+  </a>
+);
+
+// Header component for header section: Logo, Nav Items
+const Header = () => {
   return (
     <div className="header">
-      <div className="logo-container">
-        <img
-          className="logo"
-          src="https://i.pinimg.com/originals/b3/e5/f3/b3e5f321d4aedcf983a6c95f5a6d0b88.png"
-        />
-      </div>
+      <Title />
       <div className="nav-items">
         <ul>
-          <li>home</li>
-          <li>about</li>
-          <li>contact</li>
-          <li>store</li>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+          <li>
+            <i className="fa-solid fa-cart-shopping"></i>
+          </li>
         </ul>
       </div>
     </div>
   );
-}
+};
 
 export default Header;
